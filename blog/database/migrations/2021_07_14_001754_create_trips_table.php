@@ -17,6 +17,8 @@ class CreateTripsTable extends Migration
             $table->id();
             $table->string('name');
             $table->mediumText('description');
+            $table->boolean('vacancy');
+            $table->integer('price');
             $table->timestamps();
         });
     }

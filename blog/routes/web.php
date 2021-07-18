@@ -24,14 +24,14 @@ Route::get('trips', function(){
 Route::get('/trips', 'TripsController@index')->name('trips');
 /* About Route */
 Route::get('about', function () {
-    return view('about');
+    return view('pages.about');
 })->name('about');
 /* Products Route */
 Route::get('products', function () {
     return view('products');
 })->name('products');
 Route::get('products/{id}', function ($id) {
-    //
+    return 'this is product '.$id;
 })->name('product');
 /* Services Route */
 Route::get('services', function () {
@@ -46,3 +46,5 @@ Route::get('users/{userId}/comments/{commentId}', function ($userId, $commentId)
 })->name('user');
 
 Route::resource('trips', 'TripsController');
+
+Route::get('/', 'PagesController@index');

@@ -6,10 +6,9 @@
 
     <div class="trips">
         <div class="title">
-            {{ name }}
+            {{ $trips->name }}
+            {{ $trips->description }}
         </div>
-
-
     </div>
 
 @endsection

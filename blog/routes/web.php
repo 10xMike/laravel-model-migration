@@ -15,28 +15,34 @@ use Illuminate\Support\Facades\Route;
 /* Home Route*/
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
+/* Trips Route */
+Route::get('trips', function(){
+    return view('trips.index');
+});
 Route::get('/trips', 'TripsController@index')->name('trips');
 /* About Route */
 Route::get('about', function () {
     return view('about');
-});
+})->name('about');
 /* Products Route */
 Route::get('products', function () {
     return view('products');
-});
+})->name('products');
 Route::get('products/{id}', function ($id) {
     //
-});
+})->name('product');
 /* Services Route */
 Route::get('services', function () {
     return view('services');
-});
+})->name('services');
 /* Users Route */
 Route::get('users', function () {
     return view('users');
-});
-Route::get('users/{userId}/comments/{commentId}', function ($actualUserId, $actualCommentId) {
+})->name('users');
+Route::get('users/{userId}/comments/{commentId}', function ($userId, $commentId) {
     //
-});
+})->name('user');
+
+Route::resource('trips', 'TripsController');

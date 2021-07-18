@@ -13,11 +13,12 @@ class TripsController extends Controller
      */
     public function index()
     {
-        $trips = array(
+        /* $trips = array(
             'name' => 'Nome della destinazione',
             'trips' => ['Isole', 'Montagne', 'Spiagge']
-        );
-        return view('trips.index')->with($trips);
+        ); */
+        $trips = Trips::all();
+        return view('trips.index', compact('trips'));
     }
 
     /**

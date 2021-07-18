@@ -13,7 +13,8 @@ class TripsController extends Controller
      */
     public function index()
     {
-        return view('trips.index', $trips);
+        $trips = 'Welcome to Trips';
+        return view('trips.index', compact('trips'));
     }
 
     /**

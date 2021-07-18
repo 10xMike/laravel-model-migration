@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('title', 'Trips')
 
@@ -6,8 +6,7 @@
 
     <div class="trips">
         <div class="title">
-            {{ $trips->name }}
-            {{ $trips->description }}
+            {{ $trips }}
         </div>
     </div>
 

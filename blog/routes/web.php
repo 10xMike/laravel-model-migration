@@ -48,3 +48,5 @@ Route::get('users/{userId}/comments/{commentId}', function ($userId, $commentId)
 Route::resource('trips', 'TripsController');
 
 Route::get('/', 'PagesController@index');
+Route::get('about', 'PagesController@about');
+Route::get('services', 'PagesController@services');

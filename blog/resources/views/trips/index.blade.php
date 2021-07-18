@@ -6,7 +6,13 @@
 
     <div class="trips">
         <div class="title">
-            {{ $trips }}
+            @if(count($trips) > 0)
+            <ul>
+                @foreach($trips as $trip)
+                    <li>{{ $trip }}</li>
+                @endforeach
+            </ul>
+            @endif
         </div>
     </div>
 

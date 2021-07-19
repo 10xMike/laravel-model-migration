@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Trip;
 
 class TripsController extends Controller
 {
@@ -16,9 +17,9 @@ class TripsController extends Controller
         /* $trips = array(
             'name' => 'Nome della destinazione',
             'trips' => ['Isole', 'Montagne', 'Spiagge']
-        ); */
-        $trips = Trips::all();
-        return view('trips.index', compact('trips'));
+        ); */ 
+        $trips = Trips::orderBy('created_at')->paginate(10);
+        return view('trips.index')->with('trips', $trips);
     }
 
     /**
@@ -50,7 +51,7 @@ class TripsController extends Controller
      */
     public function show($id)
     {
-        //
+        return Trip::find($id);
     }
 
     /**

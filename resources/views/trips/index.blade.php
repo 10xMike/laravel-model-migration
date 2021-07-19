@@ -11,7 +11,8 @@
                     </div>
                     <div class="col-md-8 col-sm-8">
                         <h3><a href="/trip/{{$trip->id}}">{{$trip->name}}</a></h3>
-                        <small>Written on {{$trip->created_at}} by {{$trip->user->name}}</small>
+                        {{-- <small>Written on {{$trip->created_at}} by {{$trip->user->name}}</small> --}}
+                        <img src="{{ $trip->poster }}" alt="">
                     </div>
                 </div>
             </div>

@@ -18,25 +18,29 @@ Route::get('/', function () {
 })->name('home');
 
 /* Trips Route */
-Route::get('trips', function(){
+Route::get('trips', function () {
     return view('trips.index');
 });
 Route::get('/trips', 'TripsController@index')->name('trips');
+
 /* About Route */
 Route::get('about', function () {
     return view('pages.about');
 })->name('about');
+
 /* Products Route */
 Route::get('products', function () {
     return view('products');
 })->name('products');
 Route::get('products/{id}', function ($id) {
-    return 'this is product '.$id;
+    return 'this is product ' . $id;
 })->name('product');
+
 /* Services Route */
 Route::get('services', function () {
     return view('services');
 })->name('services');
+
 /* Users Route */
 Route::get('users', function () {
     return view('users');

@@ -9,7 +9,8 @@
             @if(count($trips) > 0)
             <ul>
                 @foreach($trips as $trip)
-                    <li>{{ $trip }}</li>
+                    <li>{{ $trips->name }}</li>
+                    <li>{{ $trips->poster }}</li>
                 @endforeach
             </ul>
             @endif

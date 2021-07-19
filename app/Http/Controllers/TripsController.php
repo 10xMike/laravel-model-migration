@@ -51,7 +51,8 @@ class TripsController extends Controller
      */
     public function show($id)
     {
-        return Trip::find($id);
+        $trip = Trip::find($id);
+        return view('trips.show')->with('trip', $trip);
     }
 
     /**

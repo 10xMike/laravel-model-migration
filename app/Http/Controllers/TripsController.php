@@ -18,7 +18,7 @@ class TripsController extends Controller
             'name' => 'Nome della destinazione',
             'trips' => ['Isole', 'Montagne', 'Spiagge']
         ); */ 
-        $trips = Trips::orderBy('created_at')->paginate(10);
+        $trips = Trips::all();
         return view('trips.index')->with('trips', $trips);
     }
 

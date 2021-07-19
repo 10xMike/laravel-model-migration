@@ -10,7 +10,7 @@
                         {{-- <img style="width:100%" src="/storage/cover_images/{{$trip->poster}}"> --}}
                     </div>
                     <div class="col-md-8 col-sm-8">
-                        <h3><a href="/trip/{{$trip->id}}">{{$trip->name}}</a></h3>
+                        <h3><a href="/trips/{{$trip->id}}">{{$trip->name}}</a></h3>
                         {{-- <small>Written on {{$trip->created_at}} by {{$trip->user->name}}</small> --}}
                         <img src="{{ $trip->poster }}" alt="">
                     </div>

@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Trips;
 
 use Illuminate\Http\Request;
-use App\Trip;
 
 class TripsController extends Controller
 {
@@ -51,8 +51,8 @@ class TripsController extends Controller
      */
     public function show($id)
     {
-        $trip = Trip::find($id);
-        return view('trips.show')->with('trip', $trip);
+        $trips = Trips::find($id);
+        return view('trips.show')->with('trips', $trips);
     }
 
     /**
